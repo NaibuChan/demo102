@@ -91,7 +91,6 @@ with col1:
       data["comment"].values[i] = remove_stopwords(data["comment"].values[i])
     return data
   def pre_pro_pred(text):
-    from sklearn.feature_extraction.text import TfidfVectorizer
     text = word_tokenize(text)
     text = remove_stopwords(text)
     text = text_preprocess(text)
