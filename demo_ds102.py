@@ -29,29 +29,20 @@ with col1:
   st.header("Demo app")
   st.markdown("Nhóm 22 - DS102.M21 - Trần Hoàng Anh - Phạm Tiến Dương - Trương Phước Bảo Khanh")
   st.markdown("Giảng viên: cô Nguyễn Lưu Thùy Ngân - thầy Dương Ngọc Hảo - thầy Lưu Thanh Sơn")
-  path = r"LogReg_grid_TV_CV3.sav"
-  assert os.path.isfile(path)
-  with open(path, "rb") as f:
+
+  with open('LogReg_grid_TV_CV3.sav','rb') as f:
       model_logreg = pickle.load(f)
 
-  path = r"Naive_Bayes_grid_model.sav"
-  assert os.path.isfile(path)
-  with open(path, "rb") as f:
+  with open('Naive_Bayes_grid_model.sav','rb') as f:
       model_naivebayes = pickle.load(f)
 
-  path = r"SVM_grid_model.sav"
-  assert os.path.isfile(path)
-  with open(path, "rb") as f:
+  with open('SVM_grid_model.sav','rb') as f:
       model_svm = pickle.load(f)
 
-  path = r"encoder_TV.sav"
-  assert os.path.isfile(path)
-  with open(path, "rb") as f:
+  with open('encoder_TV.sav','rb') as f:
       loaded_encoder_TV = pickle.load(f)
 
-  path = r"encoder_CV.sav"
-  assert os.path.isfile(path)
-  with open(path, "rb") as f:
+  with open('encoder_CV.sav','rb') as f:
       loaded_encoder_CV = pickle.load(f)
 
   model_choose = st.selectbox("Model: ",
@@ -91,7 +82,6 @@ with col1:
       data["comment"].values[i] = remove_stopwords(data["comment"].values[i])
     return data
   def pre_pro_pred(text):
-    text = word_tokenize(text)
     text = remove_stopwords(text)
     text = text_preprocess(text)
     text = [text]
