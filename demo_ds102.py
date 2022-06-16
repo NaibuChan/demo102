@@ -22,7 +22,7 @@ perform_svm = pd.DataFrame(data, index = ["SVM + CountVectorizer + GridSearchCV 
 
 
 with col2:  
-  img = Image.open("\\UIT.jpg")
+  img = Image.open("UIT.jpg")
   st.image(img, width=130)
 with col1:
   st.title("Nhận diện bình luận độc hại trên mạng xã hội")
