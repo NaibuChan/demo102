@@ -20,11 +20,11 @@ data = [{"F1-macro":64.66, "accuracy":89.3,"precision":52.73,"recall":26.36}]
 perform_svm = pd.DataFrame(data, index = ["SVM + CountVectorizer + GridSearchCV + No Pre-process"])
 
 
-img = Image.open("\\UIT.jpg")
-with col2:  
-with col1:
-  st.image(img, width=130)
 
+with col2:  
+  img = Image.open("\\UIT.jpg")
+  st.image(img, width=130)
+with col1:
   st.title("Nhận diện bình luận độc hại trên mạng xã hội")
   st.header("Demo app")
   st.markdown("Nhóm 22 - DS102.M21 - Trần Hoàng Anh - Phạm Tiến Dương - Trương Phước Bảo Khanh")
